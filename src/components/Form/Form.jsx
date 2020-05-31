@@ -24,6 +24,12 @@ class Form extends React.Component{
     onSubmit(event){
         event.preventDefault();
         console.log(this.state);
+        
+        this.setState({
+            name:"",
+            text:"",
+            image:""
+        })
     }
 
     render(){
