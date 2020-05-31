@@ -9,3 +9,12 @@
 label{
     display: block;
 }
+
+button{
+    color: red;
+    margin-top: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+}
