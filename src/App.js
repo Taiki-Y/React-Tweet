@@ -23,6 +23,11 @@ class App extends React.Component {
   addPost(event){
     event.preventDefault();
 
+    if(!event.target.name.value || !event.target.text.value){
+      alert('投稿者名、テキストの入力は必須です。');
+      return;
+    }
+
     const posts = [...this.state.posts];
     
     posts.push({
@@ -34,6 +39,11 @@ class App extends React.Component {
     this.setState({
       posts:posts
     })
+    
+    event.target.name.value = '';
+    event.target.text.value = '';
+    event.target.image.value = '';
+
   }
 
   render(){
