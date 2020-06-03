@@ -3,7 +3,7 @@ import Post from '../Post/Post'
 
 class Posts extends React.Component{
     render(){
-        const posts = props.posts;
+        const posts = this.props.posts;
         const posts_list = posts.map((post,index) => 
             <Post 
                 key={index}
@@ -11,7 +11,7 @@ class Posts extends React.Component{
             />
         )
         return(
-             <ul>{posts}</ul>
+             <ul>{posts_list}</ul>
         )
     }
 }
