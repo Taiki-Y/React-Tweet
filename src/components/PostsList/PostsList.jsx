@@ -11,7 +11,7 @@ class Posts extends React.Component{
             />
         )
         return(
-             <ul>{posts_list}</ul>
+             <div class="posts_list">{posts_list}</div>
         )
     }
 }

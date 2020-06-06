@@ -5,13 +5,7 @@ import PostsList from './components/PostsList/PostsList'
 class App extends React.Component {
   constructor(){
     super()
-    const posts = [
-      {
-        name: "テスト",
-        text: "テキスト",
-        image:"https://www.pakutaso.com/shared/img/thumb/yuzu20122067_TP_V4.jpg"
-      }
-    ]
+    const posts = []
 
     this.state ={
     posts: posts
@@ -23,17 +17,21 @@ class App extends React.Component {
   addPost(event){
     event.preventDefault();
 
-    if(!event.target.name.value || !event.target.text.value){
-      alert('投稿者名、テキストの入力は必須です。');
+     const post_name = event.target.name.value;
+     const post_text = event.target.text.value;
+     const post_image = event.target.image.value;
+
+    if(!post_name || !post_text || !post_image){
+      alert('投稿者名、テキスト、画像URLの入力は必須です。');
       return;
     }
 
     const posts = [...this.state.posts];
     
     posts.push({
-      name:event.target.name.value,
-      text:event.target.text.value,
-      image:event.target.image.value,
+      name: post_name,
+      text: post_text,
+      image: post_image,
     });
 
     this.setState({

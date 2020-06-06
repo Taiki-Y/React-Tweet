@@ -1,15 +1,16 @@
 import React from 'react';
+import './Post.css';
 
 class Posts extends React.Component{
     render(){
         return (
-            <li className="post">
-                <p>投稿者：{this.props.name}</p>
-                <p>テキスト：{this.props.text}</p>
-                <p>
+            <div className="post">
+                <div className="image">
                     <img src={this.props.image}/>
-                </p>
-            </li>
+                </div>
+                <h3>{this.props.name}</h3>
+                <p>{this.props.text}</p>
+            </div>
         )
     }
 }
