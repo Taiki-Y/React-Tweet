@@ -5,7 +5,7 @@ import PostsList from './components/PostsList/PostsList'
 class App extends React.Component {
   constructor(){
     super()
-    const posts = []
+    const posts = [];
 
     this.state ={
     posts: posts
@@ -41,7 +41,6 @@ class App extends React.Component {
     event.target.name.value = '';
     event.target.text.value = '';
     event.target.image.value = '';
-
   }
 
   render(){

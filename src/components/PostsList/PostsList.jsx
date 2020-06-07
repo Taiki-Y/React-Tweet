@@ -1,7 +1,7 @@
 import React from 'react';
-import Post from '../Post/Post'
+import Post from '../Post/Post';
 
-class Posts extends React.Component{
+class PostsList extends React.Component{
     render(){
         const posts = this.props.posts;
         const posts_list = posts.map((post,index) => 
@@ -16,7 +16,4 @@ class Posts extends React.Component{
     }
 }
  
-
-
-
-export default Posts;
+export default PostsList;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Post.css';
 
-class Posts extends React.Component{
+class Post extends React.Component{
     render(){
         return (
             <div className="post">
@@ -14,8 +14,5 @@ class Posts extends React.Component{
         )
     }
 }
- 
 
-
-
-export default Posts;
+export default Post;
